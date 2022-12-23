@@ -1,7 +1,15 @@
-export function countDown(n) {
-  for (let i = n; i >= 1; --i) {
-    console.log(i);
+export function getPercents(percent, number) {
+  if (percent < 0) {
+    let error = "Отрицательный процент рачитать нельзя!";
+    console.log(error);
+
+    return error;
   }
+
+  let result = (number / 100) * percent;
+  console.log(result);
+
+  return result;
 }
 
-countDown(3);
+getPercents(30, 200);
